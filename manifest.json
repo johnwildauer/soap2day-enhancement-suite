@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "soap2day Enhancment Suite",
+    "version": "1.0",
+    "description": "Reorder the content on soap2day.",
+
+    "content_scripts": [{
+        "matches": ["https://soap2day.is/*"],
+        "js": ["jquery-3.4.1.js", "content.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }],
+
+    "background": {
+        "page": "background.html",
+        "persistant": true
+    },
+
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Click me!"
+    },
+
+    "permissions": ["*://soap2day.is/*", "webNavigation", "tabs"],
+
+    "content_security_policy": "script-src 'self'; object-src 'self'; frame-src *; img-src *"
+
+}
