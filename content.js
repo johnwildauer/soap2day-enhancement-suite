@@ -11,3 +11,5 @@ for (var i = 6; i < (divs.length - 2); i += 2) {
     episodes.append(episode.get().reverse());
 
 }
+
+console.log("soap2day Enhancement Suite is working! Enjoy.")
